@@ -1,0 +1,10 @@
+# Created by Nidhal Ferjani in eclipse,java
+
+### Eclipse ###
+.classpath
+.project
+.settings/
+target/
+test-output/	
+
+

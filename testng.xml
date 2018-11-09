@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="nopcommerce Regression Suite" verbose="2"
+	preserve-order="false">
+	<parameter name="browser" value="chrome"></parameter>
+	<parameter name="baseURL"
+		value="https://demo.nopcommerce.com/"></parameter>
+
+	<!-- <listeners> <listener class-name="com.selenium.taf.utilities.GlobalListener"></listener> 
+		</listeners> -->
+
+	<test name="Test User Registration" enabled="false">
+		<classes>
+			<class name="com.selenium.taf.tests.UserRegistrationTest"></class>
+		</classes>
+	</test>
+
+	<test name="Test User Change Password" enabled="false">
+		<classes>
+			<class name="com.selenium.taf.tests.MyAccountTest"></class>
+		</classes>
+	</test>
+
+	<test name="Test User Search Product" enabled="false">
+		<classes>
+			<class name="com.selenium.taf.tests.SearchProductTest"></class>
+		</classes>
+	</test>
+
+
+	<test name="Test User Search Product" enabled="false">
+		<classes>
+			<class
+				name="com.selenium.taf.tests.SearchProductUsingAutoSuggest"></class>
+		</classes>
+	</test>
+
+
+	<test name="Test User ContactUs web Master Site" enabled="false">
+		<classes>
+			<class name="com.selenium.taf.tests.ContactUsTest"></class>
+		</classes>
+	</test>
+
+
+	<test name="Test User Send Product By Email To Friend"
+		enabled="false">
+		<classes>
+			<class name="com.selenium.taf.tests.ProductEmailFriendTest"></class>
+		</classes>
+	</test>
+
+	<test name="Test User Can change Currency" enabled="false">
+		<classes>
+			<class name="com.selenium.taf.tests.ChangeCurrencyTest"></class>
+		</classes>
+	</test>
+
+	<test name="Test User Can add Product Review" enabled="false">
+		<classes>
+			<class name="com.selenium.taf.tests.AddProductReviewTest"></class>
+		</classes>
+	</test>
+
+	<test name="Test User Can Select Sub Menu Main" enabled="false">
+		<classes>
+			<class name="com.selenium.taf.tests.ProductHoverMenuTest"></class>
+		</classes>
+	</test>
+
+	<test name="Test User Can Add and Remove Product in Wish List"
+		enabled="false">
+		<classes>
+			<class name="com.selenium.taf.tests.AddProductToWishListTest"></class>
+		</classes>
+	</test>
+
+	<test
+		name="Test User Can Add, Compare And Remove Product in Compare List"
+		enabled="false">
+		<classes>
+			<class name="com.selenium.taf.tests.AddProductToCompareTest"></class>
+		</classes>
+	</test>
+
+	<test
+		name="Test User Can Update Quantity And Remove Product in Cart List"
+		enabled="false">
+		<classes>
+			<class
+				name="com.selenium.taf.tests.AddProductToShoppingCartTest"></class>
+		</classes>
+	</test>
+
+	<test name="Test Registred User Can Check Out Product"
+		enabled="false">
+		<classes>
+			<class
+				name="com.selenium.taf.tests.RegistredUserCheckOutProductTest"></class>
+		</classes>
+	</test>
+
+	<test name="Test Guest User Can Check Out Product" enabled="false">
+		<classes>
+			<class name="com.selenium.taf.tests.GuestCheckOutProductTest"></class>
+		</classes>
+	</test>
+
+	<!-- les mêmes tests precédente mais avec un DataProperties DDT -->
+
+	<test name="Test User Registration with Data Properties"
+		enabled="false">
+		<classes>
+			<class
+				name="com.selenium.taf.tests.UserRegistrationWithDDTAndPropertiesFileTest"></class>
+		</classes>
+	</test>
+
+	<!-- les mêmes tests precédente mais avec un DataProvider DDT -->
+
+	<test name="Test User Registration with Data Provider"
+		group-by-instances="true" enabled="false">
+		<classes>
+			<class
+				name="com.selenium.taf.tests.factories.FactoryUserRegistrationWithDDT"></class>
+		</classes>
+	</test>
+
+
+	<test name="Test User Registration with Cucumber BDD"
+		group-by-instances="true" enabled="true">
+		<classes>
+			<class
+				name="com.selenium.taf.runner.TestRunner"></class>
+		</classes>
+	</test>
+
+</suite>
