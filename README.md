@@ -3,9 +3,12 @@ Source code in JAVA to understand the automation test with the Selenium WebDrive
 
 #Tech Stach :
 
-1-JAVA
-2-Maven
-3-TestNG
-4-BDD
-5-DDT
-6-Cucumber
+-JAVA
+-Maven
+-TestNG
+-BDD
+-DDT
+-Cucumber
+-Pages Object Model
+
+Just this is a demo project covering a variety of technology for automated testing
