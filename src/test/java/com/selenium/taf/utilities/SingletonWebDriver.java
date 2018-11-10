@@ -81,6 +81,16 @@ public class SingletonWebDriver {
 				caps.setCapability(PhantomJSDriverService.PHANTOMJS_CLI_ARGS, phantomJSArgs);
 				webDriver = new PhantomJSDriver(caps);
 		   	}
+			else if(browser.equalsIgnoreCase("chrome-headless")) {
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--headless");
+				//options.setHeadless(true);
+				options.addArguments("--window-size=1920,1080");
+				System.setProperty("webdriver.chrome.driver",
+			            Paths.get(".").toAbsolutePath()+"\\Drivers\\chromedriver.exe");
+
+				webDriver = new ChromeDriver(options);
+			}
 			
 	    } 
 	  
