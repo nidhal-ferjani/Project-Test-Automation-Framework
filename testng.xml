@@ -28,7 +28,7 @@
 	</test>
 
 
-	<test name="Test User Search Product" enabled="true">
+	<test name="Test User Search Product Autocomplete" enabled="true">
 		<classes>
 			<class
 				name="com.selenium.taf.tests.SearchProductUsingAutoSuggest"></class>
