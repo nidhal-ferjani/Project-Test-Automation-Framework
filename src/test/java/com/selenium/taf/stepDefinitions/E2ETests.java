@@ -81,7 +81,7 @@ public class E2ETests extends TestBase{
 	private String phoneNumber = "10109124";
 	private String lastName = "aouini";
 	private String firstName = "Ahmed";
-	private String email = "nidh111245780@gmail.com";
+	private String email = "nnnwwx144@gmail.com";
 	private OrderDetailsPage orderDetailsPage;
 	private String productName;
 }

@@ -27,5 +27,5 @@ I want to check that the user can register in our e-commerce website
   
   Examples:
   | gender | firstName | lastName | email | password |
-  | female | salim     | nesmi    | noughh12@gmail.com | kkkkd12 |
-  | female | salim     | nesmi    | noun147k2@gmail.com  | kkkkd12 |
+  | female | salim     | nesmi    | nouxxx142@gmail.com | kkkkd12 |
+  | female | salim     | nesmi    | noyyyxen7k2@gmail.com  | kkkkd12 |

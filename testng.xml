@@ -119,7 +119,7 @@
 	<!-- les mêmes tests precédente mais avec un DataProvider DDT -->
 
 	<test name="Test User Registration with Data Provider"
-		group-by-instances="true" enabled="false">
+		group-by-instances="true" enabled="true">
 		<classes>
 			<class
 				name="com.selenium.taf.tests.factories.FactoryUserRegistrationWithDDT"></class>
@@ -128,7 +128,7 @@
 
 
 	<test name="Test User Registration with Cucumber BDD"
-		group-by-instances="true" enabled="true">
+		group-by-instances="true" enabled="false">
 		<classes>
 			<class
 				name="com.selenium.taf.runner.TestRunner"></class>

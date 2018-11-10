@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
@@ -55,7 +57,7 @@ public class SingletonWebDriver {
 					caps.setCapability(InternetExplorerDriver.IGNORE_ZOOM_SETTING, true);
 					caps.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 
-				System.setProperty("webdriver.ie.driver",
+				    System.setProperty("webdriver.ie.driver",
 			            System.getProperty("user.dir")+"\\Drivers\\IEDriverServer.exe");
 				
 				webDriver = new InternetExplorerDriver();
@@ -66,6 +68,19 @@ public class SingletonWebDriver {
 				   
 				 webDriver = new SafariDriver();
 			}
+	    	
+	    	// add browser navigation mode headless PhantomJS
+			else if(browser.equalsIgnoreCase("headless")) {
+				
+				DesiredCapabilities caps = new DesiredCapabilities();
+				caps.setJavascriptEnabled(true);
+				caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, 
+						             System.getProperty("user.dir")+"\\Drivers\\phantomjs.exe");
+				
+				String [] phantomJSArgs = {"--web-security=no","--ignore-ssl-errors=yes"};
+				caps.setCapability(PhantomJSDriverService.PHANTOMJS_CLI_ARGS, phantomJSArgs);
+				webDriver = new PhantomJSDriver(caps);
+		   	}
 			
 	    } 
 	  
