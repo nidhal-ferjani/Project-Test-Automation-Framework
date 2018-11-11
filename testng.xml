@@ -19,14 +19,14 @@
 		</classes>
 	</test>
 
-	<test name="Test User Search Product" enabled="true">
+	<test name="Test User Search Product" enabled="false">
 		<classes>
 			<class name="com.selenium.taf.tests.SearchProductTest"></class>
 		</classes>
 	</test>
 
 
-	<test name="Test User Search Product Autocomplete" enabled="true">
+	<test name="Test User Search Product Autocomplete" enabled="false">
 		<classes>
 			<class
 				name="com.selenium.taf.tests.SearchProductUsingAutoSuggest"></class>
@@ -34,7 +34,7 @@
 	</test>
 
 
-	<test name="Test User ContactUs web Master Site" enabled="true">
+	<test name="Test User ContactUs web Master Site" enabled="false">
 		<classes>
 			<class name="com.selenium.taf.tests.ContactUsTest"></class>
 		</classes>
@@ -137,6 +137,7 @@
 		name="Test User Registration Parallel Testing With Selenium Grid"
 		enabled="true">
 		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="platform" value="OS X 10.9"></parameter>
 		<parameter name="baseURL"
 			value="https://demo.nopcommerce.com/"></parameter>
 		<classes>
@@ -147,7 +148,7 @@
 
 
 	<test
-		name="Test User Registration Parallel Testing With Selenium " enabled="true">
+		name="Test User Registration Parallel Testing With Selenium " enabled="false">
 		<parameter name="browser" value="firefox"></parameter>
 		<parameter name="baseURL"
 			value="https://demo.nopcommerce.com/"></parameter>

@@ -24,4 +24,6 @@ public class DataProperties {
 		
 		return dataProperties;
 	}
+	
+	
 }
