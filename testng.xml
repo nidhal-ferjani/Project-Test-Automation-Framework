@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="nopcommerce Regression Suite" verbose="2"
-	preserve-order="false">
-	<parameter name="browser" value="chrome"></parameter>
-	<parameter name="baseURL"
-		value="https://demo.nopcommerce.com/"></parameter>
-
+	preserve-order="false" parallel="tests" thread-count="2">
+	<!-- <parameter name="browser" value="chrome"></parameter> <parameter name="baseURL" 
+		value="https://demo.nopcommerce.com/"></parameter> -->
 	<!-- <listeners> <listener class-name="com.selenium.taf.utilities.GlobalListener"></listener> 
 		</listeners> -->
 
@@ -119,7 +117,7 @@
 	<!-- les mêmes tests precédente mais avec un DataProvider DDT -->
 
 	<test name="Test User Registration with Data Provider"
-		group-by-instances="true" enabled="true">
+		group-by-instances="true" enabled="false">
 		<classes>
 			<class
 				name="com.selenium.taf.tests.factories.FactoryUserRegistrationWithDDT"></class>
@@ -130,9 +128,33 @@
 	<test name="Test User Registration with Cucumber BDD"
 		group-by-instances="true" enabled="false">
 		<classes>
-			<class
-				name="com.selenium.taf.runner.TestRunner"></class>
+			<class name="com.selenium.taf.runner.TestRunner"></class>
 		</classes>
 	</test>
 
+
+	<test
+		name="Test User Registration Parallel Testing With Selenium Grid"
+		enabled="true">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="baseURL"
+			value="https://demo.nopcommerce.com/"></parameter>
+		<classes>
+			<class
+				name="com.selenium.taf.tests.factories.FactoryUserRegistrationWithDDT"></class>
+		</classes>
+	</test>
+
+
+	<test
+		name="Test User Registration Parallel Testing With Selenium " enabled="true">
+		<parameter name="browser" value="firefox"></parameter>
+		<parameter name="baseURL"
+			value="https://demo.nopcommerce.com/"></parameter>
+
+		<classes>
+			<class
+				name="com.selenium.taf.tests.factories.FactoryUserRegistrationWithDDT"></class>
+		</classes>
+	</test>
 </suite>
