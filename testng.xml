@@ -19,14 +19,14 @@
 		</classes>
 	</test>
 
-	<test name="Test User Search Product" enabled="false">
+	<test name="Test User Search Product" enabled="true">
 		<classes>
 			<class name="com.selenium.taf.tests.SearchProductTest"></class>
 		</classes>
 	</test>
 
 
-	<test name="Test User Search Product" enabled="false">
+	<test name="Test User Search Product Autocomplete" enabled="true">
 		<classes>
 			<class
 				name="com.selenium.taf.tests.SearchProductUsingAutoSuggest"></class>
@@ -34,7 +34,7 @@
 	</test>
 
 
-	<test name="Test User ContactUs web Master Site" enabled="false">
+	<test name="Test User ContactUs web Master Site" enabled="true">
 		<classes>
 			<class name="com.selenium.taf.tests.ContactUsTest"></class>
 		</classes>
